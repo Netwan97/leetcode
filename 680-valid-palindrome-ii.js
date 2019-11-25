@@ -31,7 +31,7 @@ var validPalindrome = function(s) {
                 }
             } else {
                 return false;
-            }
+            }  
         }
     }
     return true;
