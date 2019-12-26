@@ -11,3 +11,17 @@ var addDigits = function(num) {
     }
     return n;
 };
+
+
+var addDigits = function(num) {
+    function turnOne (n) {
+        var num = 0;
+        while(n != 0) {
+            num += n % 10;
+            n = Math.floor(n / 10);
+        }
+        return num > 9 ? turnOne(num) : num;
+    }
+    return turnOne(num);
+    //return num > 9 ? turnOne(num) : num;
+};
