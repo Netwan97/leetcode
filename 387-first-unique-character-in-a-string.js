@@ -18,3 +18,17 @@ var firstUniqChar = function(s) {
     }
     return -1;
 };
+
+var firstUniqChar = function(s) {
+    for(var i = 0; i < s.length; ++i) {
+        var key = "true";
+        for(var j = 0; j < s.length; ++j) {
+            if(j != i && s[j] == s[i]) {
+                key = "false";
+                break;
+            }
+        }
+        if(key === "true") return i;
+    }
+    return -1;
+};
